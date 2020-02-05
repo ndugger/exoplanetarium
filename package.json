@@ -1,0 +1,30 @@
+{
+  "name": "exoplanetarium",
+  "version": "1.0.0",
+  "description": "...",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndugger/exoplanetarium.git"
+  },
+  "author": "Nick Dugger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndugger/exoplanetarium/issues"
+  },
+  "homepage": "https://github.com/ndugger/exoplanetarium#readme",
+  "dependencies": {
+    "@types/three": "^0.103.2",
+    "cortex": "github:ndugger/cortex",
+    "three": "^0.113.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.2"
+  }
+}
