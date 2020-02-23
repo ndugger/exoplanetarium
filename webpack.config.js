@@ -2,9 +2,12 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: path.resolve(__dirname, 'exe.ts'),
+    entry: {
+        main: path.resolve(__dirname, 'src', 'main.ts'),
+        update: path.resolve(__dirname, 'src', 'workers', 'update.ts')
+    },
     output: {
-        filename: 'exe.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'resources')
     },
     devServer: {
@@ -16,7 +19,6 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                // exclude: /node_modules/,
                 use: [
                     {
                         loader: 'ts-loader',

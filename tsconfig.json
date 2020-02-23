@@ -12,6 +12,7 @@
     "moduleResolution": "node",
     "paths": {
       "*": [ "*" ],
+      "this": [ "./src/" ],
       "this/*": [ "./src/*" ]
     },
     "removeComments": true,
