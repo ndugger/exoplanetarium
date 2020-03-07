@@ -3,20 +3,29 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        main: path.resolve(__dirname, 'src', 'main.ts'),
-        update: path.resolve(__dirname, 'src', 'workers', 'update.ts')
+        graphics: path.resolve(__dirname, 'src', 'processes', 'graphics.ts'),
+        main: path.resolve(__dirname, 'src', 'processes', 'main.ts')
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'resources')
+        path: path.resolve(__dirname, 'run', 'workers')
     },
     devServer: {
         contentBase: [
-            path.join(__dirname, 'resources')
+            path.join(__dirname, 'run')
         ],
+        publicPath: '/workers/'
     },
     module: {
         rules: [
+            {
+                test: /\.glsl$/,
+                use: [
+                    {
+                        loader: 'raw-loader'
+                    }
+                ]
+            },
             {
                 test: /\.tsx?$/,
                 use: [
@@ -32,6 +41,7 @@ module.exports = {
     },
     resolve: {
         alias: {
+            fusion: path.resolve(__dirname, 'lib'),
             this: path.resolve(__dirname, 'src')
         },
         extensions: [

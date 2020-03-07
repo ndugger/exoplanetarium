@@ -4,8 +4,8 @@
   "description": "...",
   "main": "index.js",
   "scripts": {
-    "dev-server": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -19,12 +19,20 @@
   "homepage": "https://github.com/ndugger/exoplanetarium#readme",
   "dependencies": {
     "@types/three": "^0.103.2",
+    "@uifabric/icons": "^7.3.13",
+    "@uifabric/styling": "^7.10.14",
+    "babylonjs": "^4.1.0",
     "cortex": "github:ndugger/cortex",
+    "office-ui-fabric-core": "^11.0.0",
     "three": "^0.113.2",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.2"
+  },
+  "devDependencies": {
+    "raw-loader": "^4.0.0",
+    "react": "^16.12.0"
   }
 }

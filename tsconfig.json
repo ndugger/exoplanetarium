@@ -12,12 +12,16 @@
     "moduleResolution": "node",
     "paths": {
       "*": [ "*" ],
-      "this": [ "./src/" ],
-      "this/*": [ "./src/*" ]
+      "fusion": [ "lib" ],
+      "this": [ "src" ],
+      "this/*": [ "src/*" ]
     },
     "removeComments": true,
     "sourceMap": true,
-    "target": "es6"
+    "target": "es6",
+    "types": [
+      "babylonjs"
+    ]
   },
   "include": [
     "**/*"

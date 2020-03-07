@@ -1,0 +1,50 @@
+{
+    "name": "Sol",
+    "description": "Our solar system in which Earth resides.",
+    "planets": [
+        {
+            "id": 1,
+            "name": "Mercury",
+            "description": "The first planet in our solar system.",
+            "distance": {
+                "aphelion": 69816900,
+                "perihelion": 46001200
+            },
+            "resources": {
+                "texture": "/textures/mercury.jpg"
+            },
+            "satellites": []
+        },
+        {
+            "id": 2,
+            "name": "Venus",
+            "description": "The second planet in our solar system.",
+            "distance": {
+                "aphelion": 108939000,
+                "perihelion": 107477000
+            },
+            "resources": {
+                "texture": "/textures/venus.jpg"
+            },
+            "satellites": []
+        },
+        {
+            "id": 3,
+            "name": "Earth",
+            "description": "The third planet in our solar system.",
+            "distance": {
+                "aphelion": 152100000,
+                "perihelion": 147095000
+            },
+            "resources": {
+                "texture": "/textures/earth.jpg"
+            },
+            "satellites": [
+                {
+                    "id": 1,
+                    "name": "Mun"
+                }
+            ]
+        }
+    ]
+}
