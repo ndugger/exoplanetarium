@@ -1,23 +1,8 @@
-import * as Cortex from 'cortex';
 import * as Fusion from 'fusion';
 
-export class Root extends Cortex.Component {
+export class UserInterface extends Fusion.UI.Component {
 
-    private reactor: Fusion.Reactor;
-
-    protected handleComponentReady(): void {
-        this.reactor = new Fusion.Reactor(this.shadowRoot.querySelector(`.${ HTMLCanvasElement.name }`), {
-            graphics: new Worker('/workers/graphics.js')
-        });
-
-        this.reactor.addEventListener('change', () => {
-            this.update();
-        });
-
-        this.update();
-    }
-
-    public render(): Cortex.Element[] {
+    public render() {
         return [
             <HTMLCanvasElement height={ window.innerHeight } width={ window.innerWidth }/>,
             <HTMLElement tag='main'>
@@ -31,7 +16,7 @@ export class Root extends Cortex.Component {
         ];
     }
 
-    public theme(): string {
+    public theme() {
         return `
             :host {
                 display: contents;

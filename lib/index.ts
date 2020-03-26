@@ -1,15 +1,19 @@
-interface ReactorOptions {
-    graphics?: Worker;
-    network?: Worker;
-    physics?: Worker;
-}
+import { Client } from './core/Client';
+import { GFX } from './core/Graphics';
+import { Request } from './core/Request';
+import { Server } from './core/Server';
+import { Socket } from './core/Socket';
+import { System } from './core/System';
+import { Thread } from './core/Thread';
+import { UI } from './core/UserInterface';
 
-export class Reactor extends EventTarget {
-
-    public constructor(canvas: HTMLCanvasElement, options: ReactorOptions) {
-        super();
-        const offscreen = canvas.transferControlToOffscreen();
-        options.graphics.postMessage({ type: 'init', canvas: offscreen }, [ offscreen as unknown as Transferable ]);
-        this.dispatchEvent(new Event('ready'));
-    }
-}
+export {
+    Client,
+    GFX,
+    Request,
+    Server,
+    Socket,
+    System,
+    Thread,
+    UI
+};

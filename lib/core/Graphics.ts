@@ -1,0 +1,1 @@
+export * as GFX from 'babylonjs';

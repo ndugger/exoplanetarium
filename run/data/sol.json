@@ -3,10 +3,10 @@
     "description": "Our solar system in which Earth resides.",
     "planets": [
         {
-            "id": 1,
+            "id": 0,
             "name": "Mercury",
             "description": "The first planet in our solar system.",
-            "distance": {
+            "orbit": {
                 "aphelion": 69816900,
                 "perihelion": 46001200
             },
@@ -16,10 +16,10 @@
             "satellites": []
         },
         {
-            "id": 2,
+            "id": 1,
             "name": "Venus",
             "description": "The second planet in our solar system.",
-            "distance": {
+            "orbit": {
                 "aphelion": 108939000,
                 "perihelion": 107477000
             },
@@ -29,22 +29,94 @@
             "satellites": []
         },
         {
-            "id": 3,
+            "id": 2,
             "name": "Earth",
             "description": "The third planet in our solar system.",
-            "distance": {
+            "orbit": {
                 "aphelion": 152100000,
                 "perihelion": 147095000
             },
             "resources": {
                 "texture": "/textures/earth.jpg"
             },
-            "satellites": [
+            "moons": [
                 {
                     "id": 1,
-                    "name": "Mun"
+                    "name": "Luna"
                 }
             ]
+        },
+        {
+            "id": 3,
+            "name": "Mars",
+            "description": "The fourth planet in our solar system.",
+            "orbit": {
+                "aphelion": 152100000,
+                "perihelion": 147095000
+            },
+            "resources": {
+                "texture": "/textures/mars.jpg"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Jupiter",
+            "description": "The fifth planet in our solar system.",
+            "orbit": {
+                "aphelion": 152100000,
+                "perihelion": 147095000
+            },
+            "resources": {
+                "texture": "/textures/jupiter.jpg"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Saturn",
+            "description": "The sixth planet in our solar system.",
+            "orbit": {
+                "aphelion": 152100000,
+                "perihelion": 147095000
+            },
+            "resources": {
+                "texture": "/textures/saturn.jpg"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Uranus",
+            "description": "The seventh planet in our solar system.",
+            "orbit": {
+                "aphelion": 152100000,
+                "perihelion": 147095000
+            },
+            "resources": {
+                "texture": "/textures/uranus.jpg"
+            }
+        },
+        {
+            "id": 7,
+            "name": "Neptune",
+            "description": "The eigth planet in our solar system.",
+            "orbit": {
+                "aphelion": 152100000,
+                "perihelion": 147095000
+            },
+            "resources": {
+                "texture": "/textures/neptune.jpg"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Pluto",
+            "description": "The closest dwarf planet in our solar system",
+            "orbit": {
+                "aphelion": 152100000,
+                "perihelion": 147095000
+            },
+            "resources": {
+                "texture": "/textures/pluto.jpg"
+            }
         }
     ]
 }

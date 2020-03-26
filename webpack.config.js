@@ -3,18 +3,21 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        graphics: path.resolve(__dirname, 'src', 'processes', 'graphics.ts'),
-        main: path.resolve(__dirname, 'src', 'processes', 'main.ts')
+        client: path.resolve(__dirname, 'src', 'client', 'index.ts'),
+        graphics: path.resolve(__dirname, 'src', 'client', 'threads', 'graphics.ts'),
+        server: path.resolve(__dirname, 'src', 'server', 'index.ts')
     },
     output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'run', 'workers')
+        filename: '[name]',
+        path: path.resolve(__dirname, 'run', 'systems')
     },
     devServer: {
         contentBase: [
             path.join(__dirname, 'run')
-        ],
-        publicPath: '/workers/'
+        ]
+    },
+    externals: {
+        'worker_threads': 'commonjs2 worker_threads'
     },
     module: {
         rules: [

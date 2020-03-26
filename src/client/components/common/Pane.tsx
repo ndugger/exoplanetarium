@@ -1,5 +1,5 @@
 import * as Cortex from 'cortex'
-import { theme } from 'this/utilities/Theme'
+import { theme } from 'old/utilities/Theme'
 
 type Edge = 'bottom' | 'left' | 'right' | 'top';
 type EdgeArray = [ Edge?, Edge?, Edge?, Edge? ];
